@@ -23,6 +23,46 @@
     #map_event {
     display: none;
 }
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; 
+    overflow: hidden; 
+}
+
+.card img {
+    height: 150px; 
+    object-fit: cover; 
+}
+
+.card-title {
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.card-text {
+    flex-grow: 1; 
+    text-align: center;
+}
+
+.card a {
+    margin-top: 10px;
+    align-self: center; 
+}
+
+#eventCards .row {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 15px; 
+}
+
+#eventCards .col-md-4 {
+    flex: 1 1 calc(33.333% - 15px); 
+    max-width: calc(33.333% - 15px);
+    display: flex;
+}
 </style>
 
 <body>
@@ -79,7 +119,7 @@
     <div class="container" id="eventCards">
         <div class="row">
             <div class="col-md-4 mb-3 mb-sm-0">
-                <div class="card">
+                <div class="card h-100">
                     <div class="card-body">
                         <img src="https://picsum.photos/300/200" class="card-img-top img-fluid" alt="...">
                         <h5 class="card-title">Event name</h5>
@@ -89,7 +129,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card">
+                <div class="card h-100">
                     <div class="card-body">
                         <img src="https://picsum.photos/300/200" class="card-img-top img-fluid" alt="...">
                         <h5 class="card-title">Event name</h5>
@@ -99,7 +139,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card">
+                <div class="card h-100">
                     <div class="card-body">
                         <img src="https://picsum.photos/300/200" class="card-img-top img-fluid" alt="...">
                         <h5 class="card-title">Event name</h5>
@@ -114,7 +154,7 @@
     <div class="container my-5">
         <div class="row">
             <div class="col-md-4 mb-3 mb-sm-0">
-                <div class="card" id="event_info_card">
+                <div class="card h-100" id="event_info_card">
                     <img src="https://picsum.photos/300/200" class="card-img-top img-fluid" alt="...">
                     <h5 class="card-title">Event name</h5>
                     <p class="card-text">event description</p>
@@ -122,7 +162,7 @@
                 </div>
             </div>
             <div class="col-md-8">
-                <div class="card" id="map_event">
+                <div class="card h-100" id="map_event">
                 </div>
             </div>
         </div>
