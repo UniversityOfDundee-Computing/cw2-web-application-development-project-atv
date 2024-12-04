@@ -1,6 +1,6 @@
 .citycard {
     height: 100%;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 0 !important;
 }
 
@@ -10,8 +10,9 @@
     align-content: center;
     border: 0.5px solid;
     border-right: 0px;
-    background-color: #9cb6b6;
-    border-color: #4a8185;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) inset, 0 30px 40px 0 rgba(255, 255, 255, 0.2) inset;
+    background-color: #467D99;
+    border-color: #002436;
     /* add !important if changing button*/
 }
 
@@ -21,8 +22,10 @@
     align-content: center;
     border: 0.5px solid;
     border-right: 0px;
-    background-color: #9cb6b6;
-    border-color: #4a8185;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) inset, 0 30px 40px 0 rgba(255, 255, 255, 0.2) inset;
+
+    background-color: #467D99;
+    border-color: #326a86;
 
 }
 
@@ -31,8 +34,8 @@
     text-align: center;
     align-content: center;
     border: 0.5px solid;
-    background-color: #4a8185;
-    border-color: #4a8185;
+    background-color: #326a86;
+    border-color: #326a86;
 }
 
 .more_details {
