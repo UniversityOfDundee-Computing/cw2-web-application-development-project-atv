@@ -42,16 +42,18 @@ window.addEventListener("DOMContentLoaded", async function () {
         let map;
         let infoWindow;
     
-        // Initialize Google Map
-        function initMap() {
-            map = new google.maps.Map(mapEvent, {
-                center: { lat: 39.8283, lng: -98.5795 }, // Center of USA
-                zoom: 4,
-            });
-            infoWindow = new google.maps.InfoWindow();
+        // Initialize Google Map when map becomes visible
+        function initializeMap() {
+            if (!map) {
+                map = new google.maps.Map(mapEvent, {
+                    center: { lat: 39.8283, lng: -98.5795 }, // Center of USA
+                    zoom: 4,
+                });
+                infoWindow = new google.maps.InfoWindow();
+            } else {
+                google.maps.event.trigger(map, "resize"); // Ensure map resizes correctly
+            }
         }
-    
-        window.initMap = initMap; // Expose initMap to the global scope
     
         // Fetch events from Ticketmaster API
         async function fetchEvents() {
@@ -81,35 +83,21 @@ window.addEventListener("DOMContentLoaded", async function () {
                 button.href = "#";
                 button.addEventListener("click", (e) => {
                     e.preventDefault();
-                    displayEventOnMap(event);
-                    showEventDetails(event);
+                    displayEventDetails(event);
                 });
             });
         }
     
-        // Display event location on the map
-        function displayEventOnMap(event) {
-            const venue = event._embedded.venues[0];
-            const lat = venue.location.latitude;
-            const lng = venue.location.longitude;
+        // Display event details and map
+        function displayEventDetails(event) {
+            // Show the hidden sections
+            eventInfoCard.style.display = "block";
+            mapEvent.style.display = "block";
     
-            const position = { lat: parseFloat(lat), lng: parseFloat(lng) };
+            // Initialize or resize map
+            initializeMap();
     
-            map.setCenter(position);
-            map.setZoom(12);
-    
-            const marker = new google.maps.Marker({
-                position,
-                map,
-                title: event.name,
-            });
-    
-            infoWindow.setContent(`<h5>${event.name}</h5><p>${venue.address.line1}, ${venue.city.name}</p>`);
-            infoWindow.open(map, marker);
-        }
-    
-        // Show detailed event information in the new info card
-        function showEventDetails(event) {
+            // Populate event details
             const venue = event._embedded.venues[0];
             const img = eventInfoCard.querySelector("img");
             const title = eventInfoCard.querySelector(".card-title");
@@ -126,8 +114,24 @@ window.addEventListener("DOMContentLoaded", async function () {
             `;
             button.href = event.url; // Ticketmaster event link
             button.textContent = "Tickets";
+    
+            // Update map
+            const lat = parseFloat(venue.location.latitude);
+            const lng = parseFloat(venue.location.longitude);
+            const position = { lat, lng };
+    
+            map.setCenter(position);
+            map.setZoom(12);
+    
+            const marker = new google.maps.Marker({
+                position,
+                map,
+                title: event.name,
+            });
+    
+            infoWindow.setContent(`<h5>${event.name}</h5><p>${venue.address.line1}, ${venue.city.name}</p>`);
+            infoWindow.open(map, marker);
         }
     
         fetchEvents();
-});
-    
+    });
