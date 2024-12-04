@@ -63,6 +63,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         //store them so they are displayed in a window page
         localStorage.setItem('country', country);
+        //passing the strings for dates
+        localStorage.setItem('start', start_period);
+        localStorage.setItem('end', end_period);
+
+        //passing the objects for dates
         localStorage.setItem('start_date', start_date);
         localStorage.setItem('end_date', end_date);
 
