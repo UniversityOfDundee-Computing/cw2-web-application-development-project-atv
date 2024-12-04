@@ -1,0 +1,3 @@
+const CALENDARIFIC_API_KEY = 'JgT0e3x8XQAkl1oqId3SVOvp9x4FP1DI'; 
+const GOOGLE_MAPS_API_KEY = 'AIzaSyDZ1urMlxvsRmKf3rRb5WUaO3d7-DAGAvQ';    //API KEYS
+const TICKETMASTER_API_KEY = 'tnh4spfbmTePMS2kguuqlyQv0JvfHrIj';
