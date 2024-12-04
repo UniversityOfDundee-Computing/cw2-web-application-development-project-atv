@@ -1,0 +1,10 @@
+.navbar-nav {
+    justify-content: center;
+    width: 100%;
+}
+
+.dateplaceholder::placeholder {
+    font-style: italic;
+    font-size: large;
+    color: rgb(170, 170, 170);
+}
