@@ -61,3 +61,66 @@ document.getElementById('country-form').addEventListener('submit', async (e) => 
       return [];
     }
   }
+
+  // Display holidays as clickable items, just for the prototype, looks bad
+  function displayHolidays(holidays) {
+    const results = document.getElementById('results');
+    results.innerHTML = '';
+  
+    const holidaySection = document.createElement('div');
+    holidaySection.innerHTML = `<h2>Holidays:</h2>`;
+    const holidayList = document.createElement('ul');
+    holidays.forEach((holiday) => {
+      const holidayItem = document.createElement('li');
+      holidayItem.textContent = `${holiday.date.iso}: ${holiday.name}`;
+      holidayItem.style.cursor = 'pointer';
+      holidayItem.addEventListener('click', async () => {
+        const countryName = holiday.country.name || 'Unknown Country';
+        const cities = await getCities(countryName);
+        if (cities.length === 0) {
+          alert('No cities found for this country.');
+          return;
+        }
+        const cityEvents = await Promise.all(
+          cities.map(async (city) => ({
+            city,
+            events: await getEventsForCityAndDate(city, holiday.date.iso),
+          }))
+        );
+        displayEventsForHoliday(holiday, cityEvents);
+      });
+      holidayList.appendChild(holidayItem);
+    });
+    holidaySection.appendChild(holidayList);
+    results.appendChild(holidaySection);
+  }
+  
+  // Display events filtered by selected holiday, very basic selection
+  function displayEventsForHoliday(holiday, cityEvents) {
+    const results = document.getElementById('results');
+    const eventSection = document.createElement('div');
+    eventSection.innerHTML = `<h3>Events on ${holiday.date.iso} (${holiday.name}):</h3>`;
+    cityEvents.forEach(({ city, events }) => {
+      const citySection = document.createElement('div');
+      citySection.innerHTML = `<h4>Events in ${city}:</h4>`;
+      if (events.length > 0) {
+        const eventList = document.createElement('ul');
+        events.forEach((event) => {
+          const eventItem = document.createElement('li');
+          eventItem.innerHTML = `<a href="${event.url}" target="_blank">${event.name}</a> - ${event.dates.start.localDate}`;
+          eventList.appendChild(eventItem);
+        });
+        citySection.appendChild(eventList);
+      } else {
+        citySection.innerHTML += `<p>No events found in ${city} on this date.</p>`;
+      }
+      eventSection.appendChild(citySection);
+    });
+  
+    // Clear old event details and append new ones
+    const oldEventSection = document.querySelector('#results > div:last-child');
+    if (oldEventSection) {
+      oldEventSection.remove();
+    }
+    results.appendChild(eventSection);
+  }
