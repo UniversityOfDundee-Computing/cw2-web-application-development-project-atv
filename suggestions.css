@@ -1,3 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+.navbar-nav {
+    justify-content: center;
+    width: 100%;
+}
+
+
+.pt-serif-regular {
+    color: #727272;
+    font-family: "PT Serif", serif;
+    font-weight: 50;
+    font-style: italic;
+}
+
+.navbar-brand {
+    font-family: 'PT Serif', serif;
+    font-size: 2rem;
+    color: #000000;
+}
+
+.nav-link {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1rem;
+    color: #727272;
+}
+
+
 .citycard {
     height: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
