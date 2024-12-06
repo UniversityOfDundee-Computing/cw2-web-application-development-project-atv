@@ -15,7 +15,9 @@ window.addEventListener("DOMContentLoaded", async function () {
     const content = document.getElementById("citytitle");
     content.innerHTML = `<h1> Events for ${city} </h1>`;
 
-////// added from other events page
+    ////// added from other events page
+
+ 
 
     const ticketmasterApiKey = "tnh4spfbmTePMS2kguuqlyQv0JvfHrIj";
     const ticketmasterUrl = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${ticketmasterApiKey}`;
@@ -26,6 +28,8 @@ window.addEventListener("DOMContentLoaded", async function () {
 
     let map;
     let infoWindow;
+
+
 
     // Initialize Google Map when map becomes visible
     function initializeMap() {
