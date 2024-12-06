@@ -17,10 +17,12 @@ window.addEventListener("DOMContentLoaded", async function () {
 
     ////// added from other events page
 
- 
+    const new_start = start.split("/").reverse().join("-");
+    const new_end = end.split("/").reverse().join("-");
+    //https://app.ticketmaster.com/discovery/v2/events.json?apikey=tnh4spfbmTePMS2kguuqlyQv0JvfHrIj&city=Glasgow&startDateTime=25-02-20T00:00:00Z&endDateTime=2025-02-25T23:59:59Z
 
     const ticketmasterApiKey = "tnh4spfbmTePMS2kguuqlyQv0JvfHrIj";
-    const ticketmasterUrl = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${ticketmasterApiKey}`;
+    const ticketmasterUrl = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${ticketmasterApiKey}&city=${city}&startDateTime=20${new_start}T00:00:00Z&endDateTime=${new_end}T23:59:59Z`;
 
     const eventCards = document.querySelectorAll("#eventCards .card");
     const eventInfoCard = document.getElementById("event_info_card");
