@@ -2,6 +2,7 @@ window.addEventListener("DOMContentLoaded", async function () {
 
     //fetch data from previous page form and set variables we are going to use
     const country = localStorage.getItem('country');
+
     const start_date = localStorage.getItem('start_date');
     const end_date = localStorage.getItem('end_date');
     const start = localStorage.getItem('start');
@@ -18,76 +19,6 @@ window.addEventListener("DOMContentLoaded", async function () {
     end_details.textContent = `${end}`;
 
 
-
-
-    /*
-
-    // use data we have to populate our page with info..
-    const contentcard = document.getElementById("myholidaydets");
-    contentcard.innerHTML = "";
-
-
-
-    //kindof like a navbar with details
-
-
-    const col = document.createElement('div');
-    col.classList.add("col-7");
-    col.classList.add("d-grid");
-    col.classList.add("p-0");
-
-    const country_details = document.createElement("div");
-    country_details.classList.add("country_details");
-    country_details.classList.add("py-2");
-
-    country_details.innerHTML = `${country}`;
-    col.appendChild(country_details);
-    contentcard.appendChild(col);
-
-
-
-    const col2 = document.createElement('div');
-    col2.classList.add("col-2");
-    col2.classList.add("d-grid");
-    col2.classList.add("p-0");
-
-    const start_date_details = document.createElement("div");
-    start_date_details.classList.add("date_details");
-
-    start_date_details.innerHTML = `${start}`;
-    col2.appendChild(start_date_details);
-    contentcard.appendChild(col2);
-
-
-
-
-    const col3 = document.createElement('div');
-    col3.classList.add("col-2");
-    col3.classList.add("d-grid");
-    col3.classList.add("p-0");
-
-    const end_date_details = document.createElement("div");
-    end_date_details.classList.add("date_details");
-
-    end_date_details.innerHTML = `${end}`;
-    col3.appendChild(end_date_details);
-    contentcard.appendChild(col3);
-
-
-
-    const col4 = document.createElement('div');
-    col4.classList.add("col");
-    col4.classList.add("edit_col");
-    col4.classList.add("d-grid");
-    col4.classList.add("p-0");
-
-    const ammend = document.createElement("div");
-    ammend.classList.add("edit_details");
-
-    ammend.innerHTML = `Edit`;
-    col4.appendChild(ammend);
-    contentcard.appendChild(col4);
-    */
 
     //Create fake cities to pass the details to create a city-event page
 

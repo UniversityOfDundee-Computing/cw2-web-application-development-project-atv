@@ -27,21 +27,58 @@
 }
 
 
+
 .citycard {
     height: 100%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 0 !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+
 }
 
+.citycardoverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.citycarddetails {
+    display: flex;
+    color: white;
+    opacity: 1;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.citytitle {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    font-weight: 400;
+    opacity: 1;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-size: 1.8rem !important;
+    padding: 0px !important;
+}
+
+
 .country_details {
-    border-radius: 0;
+
     text-align: center;
     align-content: center;
     border: 0.5px solid;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
     border-right: 0px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) inset, 0 30px 40px 0 rgba(255, 255, 255, 0.2) inset;
-    background-color: #467D99;
-    border-color: #002436;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.03) inset, 0px 4px 20px 0 rgba(0, 0, 0, 0.03) inset;
+    background-color: #94b3c0;
+    border-color: #36525f;
     /* add !important if changing button*/
 }
 
@@ -51,21 +88,27 @@
     align-content: center;
     border: 0.5px solid;
     border-right: 0px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) inset, 0 30px 40px 0 rgba(255, 255, 255, 0.2) inset;
-
-    background-color: #467D99;
-    border-color: #326a86;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.03) inset, 0px 4px 20px 0 rgba(0, 0, 0, 0.03) inset;
+    background-color: #94b3c0;
+    border-color: #4f7c91;
 
 }
 
 .edit_details {
-    border-radius: 0;
     text-align: center;
     align-content: center;
     border: 0.5px solid;
-    background-color: #326a86;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: #4d7991;
     border-color: #326a86;
 }
+
+.edit_details:hover {
+
+    background-color: #196489;
+}
+
 
 .more_details {
     background-color: #e9e9e9 !important;
