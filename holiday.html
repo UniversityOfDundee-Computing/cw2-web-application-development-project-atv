@@ -67,10 +67,11 @@
 
                         <!-- Holiday form -->
                         <form id="holidayform">
+                            <label for="country" class="form-label">Destination</label>
                             <select class="form-select form-select-lg mb-4"
                                 style="border-color: #36525f; border-width: 0.5px;" id="country"
                                 aria-label="Destination" required>
-                                <option selected>Select Destination</option>
+                                <option value="" selected disabled>Select Destination</option>
                                 <option value="Afghanistan">Afghanistan</option>
                                 <option value="Albania">Albania</option>
                                 <option value="Algeria">Algeria</option>
@@ -313,7 +314,7 @@
                                 <option value="Zimbabwe">Zimbabwe</option>
                             </select>
 
-                            <div class="input-group input-group-lg mb-4">
+                            <div class="input-group input-group-lg mb-4" id="dateinputs">
                                 <span class="input-group-text"
                                     style="background-color: #94b3c0; border-color: #36525f; border-width: 0.5px;">Date</span>
                                 <input type="text" style="border-color: #36525f; border-width: 0.5px;" id="start_date"
@@ -323,6 +324,7 @@
                                     aria-label="End Date" class="form-control dateplaceholder" placeholder="DD/MM/YYYY"
                                     required>
                             </div>
+                            <div id="input-group-message"></div>
 
                             <div class="cardbutton text-end">
                                 <button class="btn" type="Submit" id="submitbtn" style="width: 120px;">Search</button>
