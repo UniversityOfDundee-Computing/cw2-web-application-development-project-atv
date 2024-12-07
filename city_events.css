@@ -1,0 +1,26 @@
+#map_event {
+    height: 400px;
+    width: 100%;
+}
+
+    #event_info_card,
+    #map_event {
+    display: none;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; 
+    overflow: hidden; 
+}
+
+.card img {
+    height: 150px; 
+    object-fit: cover; 
+}
+
+#event_info_card {
+    margin-bottom: 15px; 
+}
