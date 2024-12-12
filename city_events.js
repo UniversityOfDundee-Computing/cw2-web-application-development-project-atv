@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", async function () {
     const eventsPerPage = 3; // Number of events per page
 
     const ticketmasterApiKey = "tnh4spfbmTePMS2kguuqlyQv0JvfHrIj";
-    const ticketmasterUrl = (page) => `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${ticketmasterApiKey}&city=${city}&startDateTime=20${new_start}T00:00:00Z&endDateTime=${new_end}T23:59:59Z&size=${eventsPerPage}&page=${page}`;
+    const ticketmasterUrl = (page) => `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${ticketmasterApiKey}&city=${city}&startDateTime=${new_start}T00:00:00Z&endDateTime=${new_end}T23:59:59Z&size=${eventsPerPage}&page=${page}`;
 
     const eventCards = document.querySelectorAll("#eventCards .card");
     const eventInfoCard = document.getElementById("event_info_card");
