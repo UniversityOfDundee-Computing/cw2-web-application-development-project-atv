@@ -52,13 +52,14 @@
 }
 
 #event_info_card {
-    margin-bottom: 15px; 
+    margin-bottom: 15px;
     height: 400px;
 }
 
 #ticketing {
     width: 100%;
-    display: block; 
+    display: block;
+}
 
 
 .navbar-nav {
