@@ -17,7 +17,7 @@ window.addEventListener("DOMContentLoaded", async function () {
 
     var new_start = start.split("/").reverse().join("-");   //changing date formats
     var new_end = end.split("/").reverse().join("-");
-    
+
     let currentPage = 0; // To keep track of pagination from ticketmaster
     const eventsPerPage = 3; // Number of events per page
 
@@ -32,7 +32,7 @@ window.addEventListener("DOMContentLoaded", async function () {
     let infoWindow; //google maps 
 
     // weather api parts
-    const accuweatherApiKey = "Xok1b2Zov1mqI3sH5vgZQCwPJrH99ksk"; 
+    const accuweatherApiKey = "Xok1b2Zov1mqI3sH5vgZQCwPJrH99ksk";
     const accuweatherLocationUrl = `https://dataservice.accuweather.com/locations/v1/cities/search?apikey=${accuweatherApiKey}&q=${city}`;
     const accuweatherCurrentConditionsUrl = (locationKey) => `https://dataservice.accuweather.com/currentconditions/v1/${locationKey}?apikey=${accuweatherApiKey}`;
 
@@ -142,14 +142,14 @@ window.addEventListener("DOMContentLoaded", async function () {
     //  button for next 3 events
     const rotateButton = document.getElementById("rotate");
     rotateButton.addEventListener("click", () => {
-        currentPage += 1; 
+        currentPage += 1;
         fetchEvents(currentPage);
     });
 
 
 
     // Display city name
-    content.innerHTML = `<h1> Events for ${city} </h1><div id="weather"></div>`;
+    content.innerHTML = `<h3 class="m-0" style="font-weight: 200"> Events in ${city} </h3>`;
 
     // Fetch weather data
     async function fetchWeather() {
@@ -177,7 +177,7 @@ window.addEventListener("DOMContentLoaded", async function () {
         } catch (error) {
             console.error("Error fetching weather:", error);
             const weatherDiv = document.getElementById("weather");
-            weatherDiv.innerHTML = `<p>Weather information is not available.</p>`;
+            weatherDiv.innerHTML = `<h4 class="m-0" style="font-weight: 100;">Weather information is not available</h4>`;
         }
     }
 
@@ -187,7 +187,7 @@ window.addEventListener("DOMContentLoaded", async function () {
 
     fetchEvents();
 
-    
+
 
 
 });
