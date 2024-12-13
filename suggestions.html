@@ -18,54 +18,52 @@
         crossorigin="anonymous"></script>
 
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary p-3">
-        <div class="container-fluid justify-content-center p-0">
-            <a class="navbar-brand justify-content-center p-0 m-0" href="#">Holiday Planner</a>
-        </div>
-    </nav>
+    <nav class="navbar bg-body-tertiary p-3" style="background-color: rgb(244, 244, 244);">
+        <div class="container-fluid d-flex align-items-center">
+            <a class="navbar-brand position-relative start-50 translate-middle-x text-center"
+                href="holiday.html">Holiday
+                Planner</a>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary p-0 m-0">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            <button class="navbar-toggler position-relative end-0" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item mx-2">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="#">Popular destinations</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="#">Events</a>
-                    </li>
 
+            <div class="collapse navbar-collapse ms-auto" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto text-center secondary-navbar">
+                    <li class="nav-item ">
+                        <a class="nav-link p-1" href="holiday.html">Home Page</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-1" href="popular_destinations.html">Popular Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-1" href="">Events</a>
+                    </li>
                 </ul>
-
             </div>
         </div>
     </nav>
 
-    <div class="container-fluid d-flex justify-content-center align-items-center p-0 my-5"
-        style="box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); width:95%;">
-        <div class="row w-100 innershadow" id="myholidaydets">
-            <div class="col-md-7 p-0">
+    <div class="container-fluid d-flex justify-content-center align-items-center p-0 my-5" style="box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); width:95%; border-width: 1px; border-color: black; background-color: rgb(244, 244, 244); 
+            border-radius: 5px; 
+            border: 0.1px solid #9ea5a8; ">
+        <div class="row w-100 py-3 px-4" id="myholidaydets">
+            <div class="col-md-6 p-3">
                 <div class="country_details py-2" id="countrybar">
                 </div>
             </div>
-            <div class="col-md-2 p-0">
+            <div class="col-md-2 p-3">
                 <div class="date_details py-2" id="startdatebar">
                 </div>
             </div>
-            <div class="col-md-2 p-0">
+            <div class="col-md-2 p-3">
                 <div class="date_details py-2" id="enddatebar">
                 </div>
             </div>
 
-            <div class="col p-0">
+            <div class="col p-3">
                 <div class="edit_details py-2" id="editbar">
                     <button class="navbar-toggler" type="button" id="toggleContainerButton" data-bs-toggle="collapse"
                         data-bs-target="#ExternalContent" aria-controls="ExternalContent"
@@ -74,19 +72,34 @@
                     </button>
                 </div>
             </div>
-            <div class="collapse p-0" id="ExternalContent" data-bs-theme="light">
-                <div class="bg-light p-4">
-                    <h5 class="text-body-emphasis h4"> Add preferences </h5>
-                    <span class="text-body-secondary"> Change details </span>
+            <div class="collapse p-0" id="ExternalContent">
+                <div class="p-4">
+                    <h4>Add preferences</h4>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Beach
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Mountains
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Historic City
+                        </label>
+                    </div>
+
+
                 </div>
             </div>
         </div>
 
     </div>
-
-
-
-
 
 
 

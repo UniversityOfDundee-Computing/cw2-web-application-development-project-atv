@@ -24,18 +24,13 @@
     color: #727272;
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
 
 .post {
     display: flex;
     margin-bottom: 20px;
     border-bottom: 1px solid #ddd;
     padding-bottom: 20px;
-    background: #FBF5F3;
+    background: rgb(244, 244, 244);
 }
 
 .post img {
@@ -72,12 +67,3 @@
     font-weight: bold;
     text-decoration: underline;
 }
-
-
-
-
-
-
-
-
-

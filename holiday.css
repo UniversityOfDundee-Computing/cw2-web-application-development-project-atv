@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-.navbar-nav {
-    justify-content: center;
-    width: 100%;
-}
+
 
 #submitbtn {
     background-color: #94b3c0;
@@ -30,11 +27,6 @@
     font-size: large;
     color: rgb(170, 170, 170);
 }
-
-
-
-
-
 
 
 .pt-serif-regular {

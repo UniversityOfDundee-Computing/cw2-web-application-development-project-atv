@@ -91,7 +91,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //gets the form id
     const form = document.getElementById("holidayform");
-    const contentcard = document.getElementById("myholidaydetails");
 
 
 
@@ -122,25 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
             else {
                 //Check the form works and right details are passed
 
-                contentcard.innerHTML = "";
 
-                const content = document.createElement('div');
-
-                const message = document.createElement('h2');
-                message.textContent = `We are going to...`;
-
-
-                const name = document.createElement('h5');
-                name.textContent = `Country: ${country}`;
-
-                const period = document.createElement('p');
-                period.textContent = `Start: ${start_date} End: ${end_date}`;
-
-                content.appendChild(message);
-                content.appendChild(name);
-                content.appendChild(period);
-
-                contentcard.appendChild(content);
 
                 const capital = "";
 

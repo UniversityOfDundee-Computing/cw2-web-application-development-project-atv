@@ -4,8 +4,8 @@
     margin-bottom: 15px;
 }
 
-    #event_info_card,
-    #map_event {
+#event_info_card,
+#map_event {
     display: none;
 }
 
@@ -13,22 +13,75 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%; 
-    overflow: hidden; 
+    height: 100%;
+    overflow: hidden;
+}
+
+.findclass {
+    background-color: #94b3c0;
+    border-radius: 5px;
+    border: 0px;
+    color: #2B3E4F;
+}
+
+.findclass:hover {
+    background-color: #708b97;
+    border-radius: 5px;
+    border: 0px;
+    color: #2B3E4F;
+}
+
+.nextclass {
+    background-color: rgba(186, 207, 216, 0.7);
+
+    border-radius: 5px;
+    border: 0.2px solid;
+    color: #2B3E4F;
+}
+
+.nextclass:hover {
+    background-color: #708b97;
+    border-radius: 5px;
+    border: 0px;
+    color: #2B3E4F;
 }
 
 .card img {
-    height: 150px; 
-    object-fit: cover; 
+    height: 240px;
+    object-fit: cover;
 }
 
 #event_info_card {
     margin-bottom: 15px; 
     height: 400px;
-    
 }
 
 #ticketing {
     width: 100%;
     display: block; 
+
+
+.navbar-nav {
+    justify-content: center;
+    width: 100%;
+}
+
+.pt-serif-regular {
+    color: #727272;
+    font-family: "PT Serif", serif;
+    font-size: 1.5rem;
+    font-weight: 50;
+    font-style: italic;
+}
+
+.navbar-brand {
+    font-family: 'PT Serif', serif;
+    font-size: 2rem;
+    color: #000000;
+}
+
+.nav-link {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1rem;
+    color: #727272;
 }

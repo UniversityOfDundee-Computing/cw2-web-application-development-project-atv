@@ -73,11 +73,9 @@
     text-align: center;
     align-content: center;
     border: 0.5px solid;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-    border-right: 0px;
+    border-radius: 5px;
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.03) inset, 0px 4px 20px 0 rgba(0, 0, 0, 0.03) inset;
-    background-color: #94b3c0;
+    background-color: rgba(186, 207, 216, 0.7);
     border-color: #36525f;
     /* add !important if changing button*/
 }
@@ -87,10 +85,10 @@
     text-align: center;
     align-content: center;
     border: 0.5px solid;
-    border-right: 0px;
+    border-radius: 5px;
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.03) inset, 0px 4px 20px 0 rgba(0, 0, 0, 0.03) inset;
-    background-color: #94b3c0;
-    border-color: #4f7c91;
+    background-color: rgba(186, 207, 216, 0.7);
+    border-color: #36525f;
 
 }
 
@@ -98,15 +96,14 @@
     text-align: center;
     align-content: center;
     border: 0.5px solid;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-    background-color: #4d7991;
-    border-color: #326a86;
+    border-radius: 5px;
+    background-color: #94b3c0;
+    border-color: #36525f;
 }
 
 .edit_details:hover {
 
-    background-color: #196489;
+    background-color: #708b97;
 }
 
 
