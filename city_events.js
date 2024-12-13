@@ -32,7 +32,7 @@ window.addEventListener("DOMContentLoaded", async function () {
     let infoWindow; //google maps 
 
     // weather api parts
-    const accuweatherApiKey = "Xok1b2Zov1mqI3sH5vgZQCwPJrH99ksk";
+    const accuweatherApiKey = "k4ASaRn1J9k5vAKXrtvZ2ebzFbbYQmcD";
     const accuweatherLocationUrl = `https://dataservice.accuweather.com/locations/v1/cities/search?apikey=${accuweatherApiKey}&q=${city}`;
     const accuweatherCurrentConditionsUrl = (locationKey) => `https://dataservice.accuweather.com/currentconditions/v1/${locationKey}?apikey=${accuweatherApiKey}`;
 
