@@ -1,43 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Popular destinations</title>
-    <link rel='stylesheet' type='text/css' media='screen' href='popular_destinations.css'>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    
+    <link rel='stylesheet' type='text/css' media='screen' href='popular_destinations.css'>
+
 </head>
 
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    
-    <nav class="navbar navbar-expand-lg bg-body-tertiary p-3">
-        <div class="container-fluid justify-content-center p-0">
-            <a class="navbar-brand justify-content-center p-0 m-0" href="#">Holiday Planner</a>
-        </div>
-    </nav>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary p-0 m-0">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+    <nav class="navbar bg-body-tertiary p-3" style="background-color: rgb(244, 244, 244);">
+        <div class="container-fluid d-flex align-items-center">
+            <a class="navbar-brand position-relative start-50 translate-middle-x text-center"
+                href="holiday.html">Holiday
+                Planner</a>
+
+            <button class="navbar-toggler position-relative end-0" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" aria-current="page" href="#">Home</a>
+
+            <div class="collapse navbar-collapse ms-auto" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto text-center secondary-navbar">
+                    <li class="nav-item ">
+                        <a class="nav-link p-1" href="holiday.html">Home Page</a>
                     </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link active" href="#">Popular destinations</a>
+                    <li class="nav-item">
+                        <a class="nav-link p-1" href="popular_destinations.html">Popular Destinations</a>
                     </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="#">Events</a>
+                    <li class="nav-item">
+                        <a class="nav-link p-1" href="">Events</a>
                     </li>
                 </ul>
             </div>
@@ -45,43 +46,62 @@
     </nav>
 
     <div class="container-fluid position-relative" style="height: 50vh; background-color: rgb(83, 135, 185);">
-        <!-- Put a photo here please -->
         <img src="https://thesavvybackpacker.com/wp-content/uploads/2021/05/best-places-in-france.jpg"
             alt="Travel Image"
             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
     </div>
 
-    <div class="container">
-        <article class="post">
-            <img src="https://assets.cityexperiences.com/wp-content/uploads/2022/11/venice-canal-and-skyline.jpg" alt="Venice">
-        <div class="post-content">
-            <h2>Exploring the enchanting beauty of the city</h2>
-            <p>The essence of the Renaissance city and the birthplace of the Venetian School of Painting, its architecture, paintings, sculptures, operas, etc. have an extremely important position and influence in the world. Venice Water City is the only city in the world without cars. God shed tears here, making it more crystal clear and tender.</p>
-            <div class="cityinfo"></div> <!-- 此處將顯示更多資訊 -->
-            <a href="#" class="read-more" data-city="Venice" data-expanded="false">Read More</a>
-        </div>
+    <div class="container-fluid px-5 my-5" style="width:95%;">
+
+        <article class="post mb-5" style="box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);">
+            <img class=" m-0"
+                src="https://assets.cityexperiences.com/wp-content/uploads/2022/11/venice-canal-and-skyline.jpg"
+                alt="Venice">
+            <div class="post-content p-3 px-4">
+                <h2>Exploring the enchanting beauty of the city</h2>
+                <p>The essence of the Renaissance city and the birthplace of the Venetian School of Painting,
+                    its
+                    architecture, paintings, sculptures, operas, etc. have an extremely important position and
+                    influence
+                    in the world. Venice Water City is the only city in the world without cars. God shed tears
+                    here,
+                    making it more crystal clear and tender.</p>
+                <div class="cityinfo"></div>
+                <a href="#" class="read-more" data-city="Venice" data-expanded="false">Read More</a>
+            </div>
         </article>
-    
-        <article class=" post post-reverse">
-            <img src="https://www.hsinfei.com/wp-content/uploads/2024/05/%E5%B7%B4%E5%A1%9E%E9%9A%86%E7%B4%8D%E6%99%AF%E9%BB%9E-%E8%81%96%E5%AE%B6%E5%A0%82.jpg" alt="Barcelona">
-        <div class="post-content">    
-            <h2>A journey of culture in Barcelona</h2>
-            <p>La Sagrada Familia is the most representative attraction in Barcelona. Even before it is completed, it has become a world cultural heritage. Gaudi's most well-known building embodies his concept of "straight lines belong to humans, while curves belong to God."  It uses a large number of arc-shaped structures, and the interior of the church looks more colorful against the backdrop of light and shadow.</p>
-            <div class="cityinfo"></div>
-            <a href="#" class="read-more" data-city="Barcelona" data-expanded="false">Read More</a>  
-        </div>    
+
+        <article class="post post-reverse mb-5" style="box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);">
+            <img class="m-0"
+                src="https://www.hsinfei.com/wp-content/uploads/2024/05/%E5%B7%B4%E5%A1%9E%E9%9A%86%E7%B4%8D%E6%99%AF%E9%BB%9E-%E8%81%96%E5%AE%B6%E5%A0%82.jpg"
+                alt="Barcelona">
+            <div class="post-content p-3 px-4">
+                <h2>A journey of culture in Barcelona</h2>
+                <p>La Sagrada Familia is the most representative attraction in Barcelona. Even before it is completed,
+                    it has become a world cultural heritage. Gaudi's most well-known building embodies his concept of
+                    "straight lines belong to humans, while curves belong to God." It uses a large number of arc-shaped
+                    structures, and the interior of the church looks more colorful against the backdrop of light and
+                    shadow.</p>
+                <div class="cityinfo"></div>
+                <a href="#" class="read-more" data-city="Barcelona" data-expanded="false">Read More</a>
+            </div>
         </article>
-    
-        <article class="post">
-            <img src="https://d3d9mb8xdsbq52.cloudfront.net/s3/200520/162653soh.jpg" alt="Paris">
-        <div class="post-content">   
-            <h2>Exploring the romantic city in depth</h2>
-            <p>The Louvre, one of the three largest museums in the world, is located on the right bank of the Seine River in Paris. You can stroll along the Seine River, or take a leisurely stroll on the Pont Neuf or the Pont des Arts.</p>
-            <div class="cityinfo"></div> 
-            <a href="#" class="read-more" data-city="Paris" data-expanded="false">Read More</a>    
-        </div>     
+
+        <article class="post mb-5" style="box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.1);">
+            <img class="m-0" src="https://d3d9mb8xdsbq52.cloudfront.net/s3/200520/162653soh.jpg" alt="Paris">
+            <div class="post-content p-3 px-4">
+                <h2>Exploring the romantic city in depth</h2>
+                <p>The Louvre, one of the three largest museums in the world, is located on the right bank of the Seine
+                    River in Paris. You can stroll along the Seine River, or take a leisurely stroll on the Pont Neuf or
+                    the Pont des Arts.</p>
+                <div class="cityinfo"></div>
+                <a href="#" class="read-more" data-city="Paris" data-expanded="false">Read More</a>
+            </div>
         </article>
     </div>
+
+
     <script src='popular_destinations.js'></script>
 </body>
+
 </html>
